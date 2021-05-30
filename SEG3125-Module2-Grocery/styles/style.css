@@ -35,3 +35,12 @@
   border: 1px solid #ccc;
   border-top: none;
 }
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: dodgerblue;
+  text-align: center;
+  background-color:#33353d;
+}
