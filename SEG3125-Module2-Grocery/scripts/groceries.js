@@ -93,6 +93,9 @@ function restrictListProducts(prods, restriction) {
 		else if ((restriction == "nutsFree") && (prods[i].nutsFree == true)){
 			product_names.push(prods[i].name);
 		}
+		else if ( (restriction == "lactoseFree and nutsFree")  && (prods[i].lactoseFree == true) && (prods[i].nutsFree == true) ) {
+			product_names.push(prods[i].name);
+		}
 		else if (restriction == "None"){
 			product_names.push(prods[i].name);
 		}
@@ -112,6 +115,9 @@ function restrictListProductsPrice(prods, restriction) {
 		else if ((restriction == "nutsFree") && (prods[i].nutsFree == true)){
 			product_price.push(prods[i].price);
 		}
+		else if ( (restriction == "lactoseFree and nutsFree")  && (prods[i].lactoseFree == true) && (prods[i].nutsFree == true) ) {
+			product_price.push(prods[i].price);
+		}
 		else if (restriction == "None"){
 			product_price.push(prods[i].price);
 		}
@@ -125,9 +131,9 @@ function restrictListProductsPrice(prods, restriction) {
 
 // Calculate the total price of items, with received parameter being a list of products
 function getTotalPrice(chosenProducts) {
-	totalPrice = 0;
+	let totalPrice = 0;
 	for (let i=0; i<products.length; i+=1) {
-		if (chosenProducts.indexOf(products[i].name) > -1){
+		if (chosenProducts.indexOf(products[i].name) >-1){
 			totalPrice += products[i].price;
 		}
 	}
