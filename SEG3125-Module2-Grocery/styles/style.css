@@ -45,4 +45,6 @@ footer {
   background-color:#33353d;
 }
 
-select#dietSelect option[value="lactoseFree"] {background-image:url(image/herf.PNG)}
+select#dietSelect option[value="lactoseFree"] {background-image:url(images/Lactose_free.png);}
+select#dietSelect option[value="nutsFree"] {background-image:url(images/nutfree.jpg);}
+select#dietSelect option[value="lactoseFree and nutsFree"] {background-image:url(images/lactoseFree and nutsFree.jpg);}
