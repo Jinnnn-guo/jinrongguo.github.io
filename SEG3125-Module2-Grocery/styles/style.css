@@ -44,3 +44,5 @@ footer {
   text-align: center;
   background-color:#33353d;
 }
+
+select#dietSelect option[value="lactoseFree"] {background-image:url(image/herf.PNG)}
