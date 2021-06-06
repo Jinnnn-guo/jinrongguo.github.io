@@ -48,3 +48,17 @@ footer {
 select#dietSelect option[value="lactoseFree"] {background-image:url(images/Lactose_free.png);}
 select#dietSelect option[value="nutsFree"] {background-image:url(images/nutfree.jpg);}
 select#dietSelect option[value="lactoseFree and nutsFree"] {background-image:url(images/lactoseFree_nutsFree.jpg);}
+
+
+.column {
+  float: left;
+  width: 16.67%;
+  padding: 5px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
