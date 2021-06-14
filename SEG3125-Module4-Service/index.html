@@ -25,16 +25,24 @@ Many websites will use what is called CSS grid layouts, where you will have a he
     The example I give is quite simple with a logo and some text, but you can use it for many navigational patterns
     https://getbootstrap.com/docs/5.0/components/navbar/
     -->
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <strong>Cov-19 circumstance</strong> Be warned that due to Cov-19 circumstance, we are required to limit
+        the amount of people in the clinic during the same period. While you are with us, please
+        wear your mask and keep Social distance!
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div><br>
 
     <nav class="navbar bg-dark text-white p-3 my-3 ">
-        <h1><img src="images/company_logo.png" width="130" height="130"> Welcome to my Physiotherapy Clinic</h1>
+        <h1><img src="images/symbol.jpg" width="130" height="130"> Welcome to Jin's Physiotherapy Clinic</h1>
     </nav>
 
     <div class=" p-3 my-3 border bg-light">
         <h1 class=""> About us</h1>
-        <p class="p-4 my-3" style="font-size: 25px">We are a small clinic located in Smiths Falls Ontario</p>
+        <p class="p-4 my-3" style="font-size: 25px">Jin's clinic is a small clinic located in Sandy Hills Ottawa, ON</p>
         <p style="font-size: 25px; padding-left: 1.5rem">We are dedicated to providing the <strong>best</strong> care to our customers</p>
+        <p style="font-size: 25px; padding-left: 1.5rem">Our contact information: <strong>(343)222-333</strong></p>
     </div>
+    <br>
     <!--
     Tables are one of many ways to organize information easily.
     It is a good way to list of prices, or services in a business website
@@ -44,45 +52,81 @@ Many websites will use what is called CSS grid layouts, where you will have a he
         <thead>
             <tr>
                 <th scope="col"><h2>Service</h2></th>
+                <th scope="col"><h2>Price</h2></th>
                 <th scope="col"><h2>Description</h2></th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>Placeholder 1</td>
-                <td>Placeholder 2</td>
+                <td>Sports Injury Rehabilitation</td>
+                <td>$19</td>
+                <td>We provide the best cure that deals with any injury caused by:
+                Basketball injuries, tennis injuries</td>
             </tr>
             <tr>
-                <td>Placeholder 1</td>
-                <td>Placeholder 2</td>
+                <td>Spinal Rehabilitation</td>
+                <td>$29</td>
+                <td>If you are suffering under a huge pain when you sit for a
+                long time, it is time to do a whole body check.
+                    <strong>We can fix it!</strong></td>
             </tr>
             <tr>
-                <td>Placeholder 1</td>
-                <td>Placeholder 2</td>
+                <td>Women’s Health package</td>
+                <td>$99</td>
+                <td>Women's health package includes: whole body physical check,
+                normal tests, blood test, diabetes test and many others</td>
+            </tr>
+            <tr>
+                <td>Child care package</td>
+                <td >$33</td>
+                <td>Physical check and whole body muscle check</td>
+            </tr>
+            <tr>
+                <td>Massage Therapy</td>
+                <td >$40/$88/148</td>
+                <td>$40: 30 min message for whole body, mainly the back.
+                <br>$88: 1 hr whole body message + 20 min foot message
+                <br>$148(package for two): 1 hr whole body message + 20 min foot message (*2)</td>
             </tr>
         </tbody>
     </table>
-    <h1>Here is an alert!</h1>
+    <br>
+    <h1>Meet our Physicians!</h1>
+    <div class="row justify-content-around">
+        <div class="card" style="width: 18rem;">
+            <img src="images/doctor.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-text"><STRONG>Doctor MM</STRONG><br>Good at Child care, women care and message </p>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="images/doctor2.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-text"><STRONG>Doctor JJ</STRONG><br>Good at sport injury and women care</p>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="images/doctor3.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-text"><STRONG>Doctor WW</STRONG><br>Good at spinal Rehabilitation and sport injury</p>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="images/doctor4.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-text"><STRONG>Doctor AA</STRONG><br>Good at spinal Rehabilitation, child care, message and sport injury</p>
+            </div>
+        </div>
+    </div>
+    <br>
+
+
     <!-- Alerts are an easy way to grab the users attention, this page goes into more detail
     https://getbootstrap.com/docs/5.0/components/alerts/
     -->
-    <p>This indicated something important in the page</p>
-    <div class="alert alert-danger alert-dismissible fade show" role="alert">
-        <strong>Yikes!</strong> Perhaps you left one of the fields empty for this to appear?
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>
 
-    <h1>Button States</h1>
-    <!--
-    Buttons can be used for submitting forms, triggering events among many other things.
-    https://getbootstrap.com/docs/5.0/components/buttons/
-    -->
 
-    <button type="button" class="btn btn-warning">Primary Button</button>
-    <button type="button" class="btn btn-warning active">Active Button</button>
-    <button type="button" class="btn btn-warning" disabled>Disabled Button</button>
-
-    <h1>Modal Example</h1>
+    <h1>Make an appointment before you come</h1>
 
     <!-- Button trigger modal
     We use the same button code from above, but now we can trigger a modal to appear.
@@ -90,7 +134,7 @@ Many websites will use what is called CSS grid layouts, where you will have a he
     https://getbootstrap.com/docs/5.0/components/modal/
     -->
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        Launch demo modal
+        Make a reservation
     </button>
 
     <!-- Modal -->
@@ -102,7 +146,7 @@ Many websites will use what is called CSS grid layouts, where you will have a he
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    In the body we can add various components. In this example some radio buttons
+                    In the past 14 days, have you been to the outside of ON province?
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
                         <label class="form-check-label" for="flexRadioDefault1">
@@ -116,6 +160,81 @@ Many websites will use what is called CSS grid layouts, where you will have a he
                         </label>
                     </div>
                 </div>
+                <div class="modal-body">
+                    Do you have any of the following symptoms?
+                        <ol>
+                            <li>
+                                Cough
+                            </li>
+                            <li>
+                                Fever
+                            </li>
+                            <li>
+                                Headache
+                            </li>
+                        </ol>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="myResult" id="flexRadioDefault3">
+                        <label class="form-check-label" for="flexRadioDefault3">
+                            Yes
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="myResult" id="flexRadioDefault4" checked>
+                        <label class="form-check-label" for="flexRadioDefault4">
+                            No
+                        </label>
+                    </div>
+                </div>
+                <div class="modal-body">
+
+                        Choose a Doctor:
+                        <select id="doctorSelect" name="doctorSelect" >
+                            <option value=""></option>
+                            <option value="Doctor MM">Doctor MM</option>
+                            <option value="Doctor JJ">Doctor JJ</option>
+                            <option value="Doctor WW">Doctor WW</option>
+                            <option value="Doctor AA">Doctor AA</option>
+                        </select>
+
+                </div>
+                <div class="modal-body">
+
+                        Select a Service:
+                        <select id="serviceSelect" name="doctorSelect" >
+                            <option value=""></option>
+                            <option value="Sports Injury Rehabilitation">Sports Injury Rehabilitation</option>
+                            <option value="Spinal Rehabilitation">Spinal Rehabilitation</option>
+                            <option value="Women’s Health package">Women’s Health package</option>
+                            <option value="Child care package">Child care package</option>
+                            <option value="Massage Therapy">Massage Therapy</option>
+                        </select>
+
+                </div>
+                <div class="modal-body">
+                    Book your date:
+                    <div class="form-check">
+                        <input type="date"name="flexRadioDefault" id="flexRadioDefault11">
+                        <input type="time" name="flexRadioDefault" id="flexRadioDefault">
+
+                    </div>
+                </div>
+
+                <div class="modal-body">
+                    Please enter your name:
+                    <div class="form-check">
+                        <input type="text"name="flexRadioDefault" id="customerName">
+                    </div>
+                </div>
+
+                <div class="modal-body">
+                    Please enter your number:
+                    <div class="form-check">
+                        <input type="text" name="flexRadioDefault" id="customerNumber">
+
+                    </div>
+                </div>
+
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     <button type="button" class="btn btn-primary">Save changes</button>
@@ -129,41 +248,28 @@ Many websites will use what is called CSS grid layouts, where you will have a he
     https://getbootstrap.com/docs/5.0/components/card/
     -->
 
-    <h1>Meet the Physicians!</h1>
-    <div class="row justify-content-around">
-        <div class="card" style="width: 18rem;">
-            <img src="images/doctor.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <p class="card-text">Here is some filler text, in here you can describe your doctor</p>
-            </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-            <img src="images/doctor.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <p class="card-text">Here is some filler text, in here you can describe your doctor</p>
-            </div>
-        </div>
-    </div>
 
     <!--
     We can also use buttons to expand some hidden options
     https://getbootstrap.com/docs/5.0/components/collapse/
-    -->
-    <h1>More Information</h1>
 
-    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-        Button To Expand Options
-    </button>
+   -->
+    <!--
+        <h1>More Information</h1>
 
-    <div class="collapse" id="collapseExample">
-        <div class="card card-body">
-            Here we have some hidden data to avoid cluttering the page with information
+        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+            Button To Expand Options
+        </button>
+
+        <div class="collapse" id="collapseExample">
+            <div class="card card-body">
+                Here we have some hidden data to avoid cluttering the page with information
+            </div>
         </div>
-    </div>
 
-    <!-- This example is using what is called an accordian, this is one of three examples
-    https://getbootstrap.com/docs/5.0/components/accordion/
-    -->
+        This example is using what is called an accordion, this is one of three examples
+        https://getbootstrap.com/docs/5.0/components/accordion/
+
 
     <div class="accordion accordion-flush" id="accordionFlushExample">
         <div class="accordion-item">
@@ -197,7 +303,24 @@ Many websites will use what is called CSS grid layouts, where you will have a he
             </div>
         </div>
     </div>
-
+    -->
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br><br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
 </div>
 <!-- here we input our javascript helper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
