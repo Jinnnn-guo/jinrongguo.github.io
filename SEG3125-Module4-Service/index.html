@@ -32,23 +32,50 @@ Many websites will use what is called CSS grid layouts, where you will have a he
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div><br>
 
+    <a name="top"></a>
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark p-3">
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#aboutUs">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#Services">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#Physicians">Our Physicians</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#appointment">Make an appointment</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
     <nav class="navbar bg-dark text-white p-3 my-3 ">
         <h1><img src="images/symbol.jpg" width="130" height="130"> Welcome to Jin's Physiotherapy Clinic</h1>
     </nav>
 
-    <div class=" p-3 my-3 border bg-light">
+
+
+    <div class=" p-3 my-3 border bg-light" id="aboutUs">
         <h1 class=""> About us</h1>
         <p class="p-4 my-3" style="font-size: 25px">Jin's clinic is a small clinic located in <strong>123 Somerset Street East</strong>, Sandy Hills Ottawa, ON</p>
         <p style="font-size: 25px; padding-left: 1.5rem">We are dedicated to providing the <strong>best</strong> care to our customers</p>
         <p style="font-size: 25px; padding-left: 1.5rem">Our contact information: <strong>(343)222-333</strong></p>
     </div>
     <br>
+
     <!--
     Tables are one of many ways to organize information easily.
     It is a good way to list of prices, or services in a business website
     https://getbootstrap.com/docs/5.0/content/tables/
     -->
-    <table class="table table-info table-hover">
+    <table class="table table-info table-hover" id="Services">
         <thead>
             <tr>
                 <th scope="col"><h2>Service</h2></th>
@@ -91,8 +118,9 @@ Many websites will use what is called CSS grid layouts, where you will have a he
         </tbody>
     </table>
     <br>
-    <h1>Meet our Physicians!</h1>
-    <div class="row justify-content-around">
+
+    <div class="row justify-content-around" id="Physicians">
+        <h1>Meet our Physicians!</h1>
         <div class="card" style="width: 18rem;">
             <img src="images/doctor.jpg" class="card-img-top" alt="...">
             <div class="card-body">
@@ -125,26 +153,30 @@ Many websites will use what is called CSS grid layouts, where you will have a he
     https://getbootstrap.com/docs/5.0/components/alerts/
     -->
 
+    <div class="container" id="appointment">
+        <h1>Make an appointment before you come</h1>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Make a reservation
+        </button>
+    </div>
 
-    <h1>Make an appointment before you come</h1>
 
     <!-- Button trigger modal
     We use the same button code from above, but now we can trigger a modal to appear.
     The bootstrap tutorial includes many different types of modals that you can explore
     https://getbootstrap.com/docs/5.0/components/modal/
     -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        Make a reservation
-    </button>
+
 
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Make an appointment</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
+
                 <div class="modal-body">
                     In the past 14 days, have you been to the outside of ON province?
                     <div class="form-check">
@@ -186,59 +218,72 @@ Many websites will use what is called CSS grid layouts, where you will have a he
                         </label>
                     </div>
                 </div>
+                <hr>
+
+
                 <div class="modal-body">
+                    <form onsubmit="alert('Congratulations! Your appointment has been made!');return false">
 
                         Choose a Doctor:
-                        <select id="doctorSelect" name="doctorSelect" >
-                            <option value=""></option>
-                            <option value="Doctor MM">Doctor MM</option>
-                            <option value="Doctor JJ">Doctor JJ</option>
-                            <option value="Doctor WW">Doctor WW</option>
-                            <option value="Doctor AA">Doctor AA</option>
-                        </select>
-
-                </div>
-                <div class="modal-body">
+                        <div class="form-check">
+                            <select id="doctorSelect" name="doctorSelect" required>
+                                <option value=""></option>
+                                <option value="Doctor MM">Doctor MM</option>
+                                <option value="Doctor JJ">Doctor JJ</option>
+                                <option value="Doctor WW">Doctor WW</option>
+                                <option value="Doctor AA">Doctor AA</option>
+                            </select>
+                        </div>
 
                         Select a Service:
-                        <select id="serviceSelect" name="doctorSelect" >
-                            <option value=""></option>
-                            <option value="Sports Injury Rehabilitation">Sports Injury Rehabilitation</option>
-                            <option value="Spinal Rehabilitation">Spinal Rehabilitation</option>
-                            <option value="Women’s Health package">Women’s Health package</option>
-                            <option value="Child care package">Child care package</option>
-                            <option value="Massage Therapy">Massage Therapy</option>
-                        </select>
+                        <div class="form-check">
+                            <select id="serviceSelect" name="doctorSelect" required>
+                                <option value=""></option>
+                                <option value="Sports Injury Rehabilitation">Sports Injury Rehabilitation</option>
+                                <option value="Spinal Rehabilitation">Spinal Rehabilitation</option>
+                                <option value="Women’s Health package">Women’s Health package</option>
+                                <option value="Child care package">Child care package</option>
+                                <option value="Massage Therapy">Massage Therapy</option>
+                            </select>
+                        </div>
+
+                        Book your date:
+                        <div class="form-check">
+                            <input type="date"name="flexRadioDefault" id="flexRadioDefault11" required>
+                            <input type="time" name="flexRadioDefault" id="flexRadioDefault" required>
+                        </div>
+                        <br>
+
+                        <hr>
+                        <br>
+
+                        Please enter your name:
+                        <div class="form-check">
+                            <input type="text"name="flexRadioDefault" id="customerName" required>
+                        </div>
+
+                        Please enter your number:
+                        <div class="form-check">
+                            <input type="text" name="flexRadioDefault" id="customerNumber" placeholder="(###)###-####" title="(###)###-####" pattern="\(\d{3}\)+\d{3}-\d{4}" required>exact format(###)###-####
+
+                        </div>
+
+                        Please enter your credit card number:
+                        <div class="form-check">
+                            <input type="text" id="debit" title="We ask for your credit card number in case of no-show, 20$ will be charged." required></p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary">Submit appointment</button>
+                        </div>
+                    </form>
+
 
                 </div>
-                <div class="modal-body">
-                    Book your date:
-                    <div class="form-check">
-                        <input type="date"name="flexRadioDefault" id="flexRadioDefault11">
-                        <input type="time" name="flexRadioDefault" id="flexRadioDefault">
 
-                    </div>
-                </div>
 
-                <div class="modal-body">
-                    Please enter your name:
-                    <div class="form-check">
-                        <input type="text"name="flexRadioDefault" id="customerName">
-                    </div>
-                </div>
 
-                <div class="modal-body">
-                    Please enter your number:
-                    <div class="form-check">
-                        <input type="text" name="flexRadioDefault" id="customerNumber">
 
-                    </div>
-                </div>
-
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
             </div>
         </div>
     </div>
@@ -312,6 +357,7 @@ Many websites will use what is called CSS grid layouts, where you will have a he
     <br>
     <br>
     <br>
+    <a href="#top">Back to top of page</a>
     <br><br>
     <br>
     <br>
@@ -321,6 +367,7 @@ Many websites will use what is called CSS grid layouts, where you will have a he
     <br>
     <br>
     <br>
+
 </div>
 <!-- here we input our javascript helper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
